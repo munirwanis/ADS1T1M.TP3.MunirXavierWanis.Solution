@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alunos>
+  <aluno>
+    <matricula>fn944098u</matricula>
+    <nome>PauloMau</nome>
+    <datadenascimento>24/10/1967</datadenascimento>
+    <cpf>84189380210</cpf>
+    <ativo>1</ativo>
+  </aluno>
+  <aluno>
+    <matricula>9j35tnfgn</matricula>
+    <nome>PauloMau</nome>
+    <datadenascimento>24/10/1967</datadenascimento>
+    <cpf>84189380210</cpf>
+    <ativo>0</ativo>
+  </aluno>
+</alunos>
