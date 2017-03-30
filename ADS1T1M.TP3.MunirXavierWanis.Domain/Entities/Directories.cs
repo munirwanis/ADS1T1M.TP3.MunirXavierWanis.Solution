@@ -4,6 +4,6 @@
     {
         public static string BaseDirectory { get; } = System.AppDomain.CurrentDomain.BaseDirectory;
 
-        public static string ExportAlunoDirectory { get; } = $@"{BaseDirectory}\Data\exporte-alunos.xml";
+        public static string ExportAlunoDirectory { get; } =  $@"{BaseDirectory}exporte-alunos.xml";
     }
 }
