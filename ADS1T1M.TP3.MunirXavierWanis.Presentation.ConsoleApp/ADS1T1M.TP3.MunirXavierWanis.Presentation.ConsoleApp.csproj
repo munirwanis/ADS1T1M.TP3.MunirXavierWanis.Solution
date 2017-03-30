@@ -58,6 +58,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="..\Data\exporte-alunos.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Domain\ADS1T1M.TP3.MunirXavierWanis.Domain.csproj">
@@ -77,4 +78,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="..\Data\exporte-alunos.xml" DestinationFolder="$(ProjectDir)$(OutDir)\" ContinueOnError="true" />
+  </Target>
 </Project>
