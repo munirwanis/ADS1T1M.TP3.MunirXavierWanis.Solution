@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02572E25-5AB5-4DDC-B301-26F961071054}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp</RootNamespace>
-    <AssemblyName>ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp</AssemblyName>
+    <RootNamespace>ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger</RootNamespace>
+    <AssemblyName>ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,16 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,26 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="..\Data\exporte-alunos.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Domain\ADS1T1M.TP3.MunirXavierWanis.Domain.csproj">
       <Project>{ee1bd8da-a32f-4122-b644-75d2d9d8fb31}</Project>
       <Name>ADS1T1M.TP3.MunirXavierWanis.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Infra.Data\ADS1T1M.TP3.MunirXavierWanis.Infra.Data.csproj">
-      <Project>{44989ae7-b92c-452a-bc66-82c597e9c0a6}</Project>
-      <Name>ADS1T1M.TP3.MunirXavierWanis.Infra.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger\ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger.csproj">
-      <Project>{2ca252bd-a517-4e0a-8a03-2e47b7afaaa4}</Project>
-      <Name>ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -82,7 +57,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Target Name="AfterBuild">
-    <Copy SourceFiles="..\Data\exporte-alunos.xml" DestinationFolder="$(ProjectDir)$(OutDir)\" ContinueOnError="true" />
-  </Target>
 </Project>

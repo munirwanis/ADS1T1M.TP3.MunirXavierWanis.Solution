@@ -1,0 +1,8 @@
+matricula>sdz.k�lf; nome>Pedro; ativo>1; OK;
+matricula>aosdhsdhfll�a; nome>Hue Br; ativo>1; OK;
+matricula>asdfasdf; nome>Jonny Be Good; ativo>0; OK;
+matricula>papspfiif; nome>Michelle; ativo>0; Alterado: ativo>0;
+matricula>hlkjaslkjsdg; nome>Manolo; ativo>1; OK;
+matricula>asdgdfhfhgfddd; nome>Raul Gil; ativo>0; Alterado: ativo>0;
+matricula>xcvcvcjgg; nome>No Ideia; ativo>1; Alterado: ativo>1;
+matricula>lkjpoiuf; nome>Anti Cristo; ativo>1; OK;

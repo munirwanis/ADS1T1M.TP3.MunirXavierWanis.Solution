@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML-Original", "XML-Origina
 		XML-Original\exporte-alunos-02.xml = XML-Original\exporte-alunos-02.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger", "ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger\ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger.csproj", "{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{44989AE7-B92C-452A-BC66-82C597E9C0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44989AE7-B92C-452A-BC66-82C597E9C0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44989AE7-B92C-452A-BC66-82C597E9C0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{EE1BD8DA-A32F-4122-B644-75D2D9D8FB31} = {3FA79DF1-973A-4F60-B632-10D533ABA5EF}
 		{14C7098A-1D01-427F-AAF0-1DE82265E745} = {F2F082F2-FE7B-43B6-BC8E-8EF3816D36F3}
 		{44989AE7-B92C-452A-BC66-82C597E9C0A6} = {14C7098A-1D01-427F-AAF0-1DE82265E745}
+		{2CA252BD-A517-4E0A-8A03-2E47B7AFAAA4} = {62A64FF2-BB6F-43EC-B099-9B94D4C15A74}
 	EndGlobalSection
 EndGlobal
