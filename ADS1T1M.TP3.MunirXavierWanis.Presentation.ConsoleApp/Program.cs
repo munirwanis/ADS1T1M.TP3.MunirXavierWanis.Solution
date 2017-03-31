@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using ADS1T1M.TP3.MunirXavierWanis.Domain.Entities;
+using ADS1T1M.TP3.MunirXavierWanis.Infra.Data.Contexts;
 
 namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
 {
@@ -17,11 +15,35 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
             var alunos = new AlunosList();
             using (var fs = new FileStream(Directories.ExportAlunoDirectory, FileMode.Open))
             {
-                alunos = (AlunosList) serializer.Deserialize(fs);
+                alunos = (AlunosList)serializer.Deserialize(fs);
             }
-            foreach (var aluno in alunos.Alunos)
+
+            using (var context = new EntityContextDb())
             {
-                Console.WriteLine($"{aluno.Birthdate}, {aluno.Cpf}, {aluno.Enabled}, {aluno.Enrollment}, {aluno.Identifier}, {aluno.Name}");
+                foreach (var aluno in alunos.Alunos)
+                {
+                    var alunoDb = (from db in context.AlunoDb
+                                   where db.Cpf == aluno.Cpf &&
+                                         db.Enrollment == aluno.Enrollment &&
+                                         db.Name == aluno.Name
+                                   select db).SingleOrDefault();
+                    if (alunoDb == null)
+                    {
+                        context.AlunoDb.Add(aluno);
+                        //TODO: LOG new aluno
+                    }
+                    else if (alunoDb.Enabled != aluno.Enabled)
+                    {
+                        alunoDb.Enabled = aluno.Enabled;
+                        //TODO: LOG changed aluno
+                    }
+                    else
+                    {
+                        //TODO: LOG not changed aluno
+                    }
+                    context.SaveChanges();
+                    Console.WriteLine($"{aluno.Birthdate}, {aluno.Cpf}, {aluno.Enabled}, {aluno.Enrollment}, {aluno.Id}, {aluno.Name}");
+                }
             }
             Console.ReadKey();
         }

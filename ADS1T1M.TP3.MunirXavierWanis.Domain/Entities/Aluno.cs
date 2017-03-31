@@ -6,8 +6,7 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Domain.Entities
 {
     public class Aluno
     {
-        [XmlElement("identificador")]
-        public string Identifier { get; set; }
+        public Guid Id { get; set; }
 
         [XmlElement("nome")]
         public string Name { get; set; }
