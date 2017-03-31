@@ -11,6 +11,22 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
     {
         static void Main(string[] args)
         {
+            #region TESTE DE LOG
+            using (var fs = new FileStream(Directories.LogDirectory, FileMode.Append, FileAccess.Write))
+            {
+                using (var sw = new StreamWriter(fs))
+                {
+                    sw.WriteLine("This is some text in the file.");
+                }
+            }
+            using (var fs = new FileStream(Directories.LogDirectory, FileMode.Append, FileAccess.Write))
+            {
+                using (var sw = new StreamWriter(fs))
+                {
+                    sw.WriteLine("This is some text in the file.");
+                }
+            }
+            #endregion
             var serializer = new XmlSerializer(typeof(AlunosList));
             var alunos = new AlunosList();
             using (var fs = new FileStream(Directories.ExportAlunoDirectory, FileMode.Open))
