@@ -1,4 +1,4 @@
-# ADS1T1M.TP3.MunirXavierWanis.Solution
+# ADS1T1M.TP3.MunirXavierWanis
 
 ## TP3 - Alternativo
 
@@ -103,3 +103,119 @@ Programação Orientada a Objetos. Em Program e Main, só deverá ter as chamada
 Indentação de código.
 
 Realizar cada uma das tarefas solicitadas. 
+
+## Assessment - Alternativo
+
+Desenvolvimento de uma aplicação desktop com WPF para consulta de dados 
+
+1. Abra a Solution do seu TP3 Alternativo
+2. Na Solution Folder “1-Presentation”, adicione um projeto WPF Application
+
+> ADS1T1M.TP3.SEU_NOME.Presentation.WPFApp
+
+Você deverá adicionar referências para Infra.Data e Domain. Deverá adicionar via Nuget, o Entity Framework.
+
+Esta é ideia da interface:
+
+![Interface](./img/interface.png)
+
+### Elementos mínimos:
+
+Parte superior da tela: um Label para “Matrícula:”, um TextBox para “matricula” e um Button “btnBuscarMatricula” “Buscar Matrícula”
+
+Inclua um evento on-click para o botão.
+
+Parte intermediária da tela: um Label e um TextBlock para cada informação: Nome, Matrícula, Data de Nascimento e CPF.
+
+Parte inferior da tela: um TextBlock, com altura e largura definidos e com texto centralizado.
+
+Este elemento não poderá estar visível na tela. Só deverá ser apresentado, quando necessário.
+
+Procure na internet como manter escondido um elemento no WPF. Adianto que é muito simples e que é uma propriedade do mesmo.
+
+Execução do programa: um usuário poderá digitar o número de uma matrícula e clicar no botão de busca. Uma vez que se encontre ou não a matrícula procurada, dados deverão ser apresentados na tela.
+
+### OBSERVAÇÃO
+
+Para evitar problemas na execução de ambos os projetos dentro da Solution, você deve definir a string de conexão no arquivo app.config de ambos os projetos.
+
+A string de conexão deve ser colocada imediatamente após o fechamento da tag
+
+```xml
+</appSettings>
+```
+
+Não esqueça de trocar “SeuNome” na string abaixo
+
+```xml
+</appSettings>
+<connectionStrings>
+ <add name="OperasDB" connectionString="DataSource=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ASS_16t4_SeuNome.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+Não esqueça, para executar um projeto, você deve defini-lo como projeto de start, faça isso clicando om o botão direito sobre o projeto e depois na opção “Set as StartUp Project” 
+
+![Set as StartUp Project](./img/startup_proj.png)
+
+### LÓGICA:
+No método que representa o click do botão, que você incluiu anteriormente, você deve:
+
+Recuperar a matrícula digitada e realizar uma consulta na base de dados, que foi criada anteriormente no TP3 Alternativo.
+
+Caso não encontre a matrícula digitada, deverá apresenta no TextBlock, a frase “Aluno não cadastrado”. O TextBlock deverá ter fundo azul e letra branca em negrito (bold).
+
+Caso encontre a matrícula e o aluno esteja Ativo = true. Deverá apresenta no TextBlock, a frase “Aluno liberado”. O TextBlock deverá ter fundo verde e letra branca em negrito (bold). Os dados do aluno deverão ser apresentados na tela.
+
+Caso encontre a matrícula e o aluno esteja Ativo = false. Deverá apresenta no TextBlock, a frase “Aluno suspenso”. O TextBlock deverá ter fundo vermelho e letra branca em negrito (bold). Os dados do aluno deverão ser apresentados na tela.
+
+Ao realizar uma nova consulta, o elemento TextBlock deverá ficar invisível novamente.
+
+#### Códigos de apoio
+
+```xml
+<TextBox x:Name="matricula" TextChanged="matricula_TextChanged" ......
+<Button x:Name="btnBuscarMatricula" Content="Buscar Matrícula"
+<TextBlock x:Name="tbkRetorno" Height="35" Width="300" TextAlignment="Center" FontSize="25" Background="Blue" Foreground="White" FontWeight="Bold" Visibility="Hidden" ......
+```
+
+```c#
+private void matricula_TextChanged(object sender, TextChangedEventArgs e)
+{
+    tbkRetorno.Visibility = Visibility.Hidden;
+} 
+```
+
+### Regras e orientações:
+
+1. Você deverá refatorar (arrumar) o código original do TP3, para seguir os princípio da orientação a objetos e engenharia de software.
+  1. Princípio da Responsabilidade Única
+  2. Princípio do Aberto-Fechado
+  3. Princípio da Substituição de Liskov (se houver herança)
+  4. Princípio da Segregação de Interface
+
+2. Coloque a pasta da solução original do TP3 Alternativo dentro de uma pasta chamada “Assessment Seu_NOME”, e compacte esta pasta para envio. **MÉTODO DE COMPACTAÇÃO: ZIPADO**.
+```diff
+- Não seguir esta simples orientação, provocará a perda de 50% do valor da nota.
+```
+
+3. Antes de compactar, exclua os arquivos internos da pasta package, bim e
+obj. Isso vai diminuir o tamanho do zip,
+```diff
+- mas antes desta ação, abra a Solution e clique com o botão direito nela. Clique na opção “Restore Nuget Packages. Salve a Solution. Feche a Solution.
+```
+![Restore Nuget Packages](./img/restore_nuget.png)
+
+4. Rubrica:
+  1. O aluno deverá apresentar a Solution conforme o especificado no “TP3 Alternativo” e “Assessemt Alternativo”.
+  2. Aplicação funcionando.
+  3. Código indentado.
+  4. Não cometer plágio. Fazer em dupla, trio e etc. é uma coisa. Ter partes dos códigos e/ou telas idênticos é plágio. ZERO PARA TODOS OS ENVOLVIDOS. Será solicitado à Coordenação a aplicação das punições acadêmicas definidas nos regulamentos do INSTITUTO INFNET. 
+  5. O aluno seguiu o princípio mais importante: Princípio da Responsabilidade Única, criando as classes e os métodos adequados à execução da lógica necessária ao funcionamento correto do software, conforme especificado.
+  6. O aluno utilizou Interfaces para definir os métodos públicos das classes que precisou criar.
+  7. A tela estava de acordo com os elementos mínimos necessários
+  8. Apresentou corretamente as mensagens na tela, conforme a situação do aluno ou a inexistência de cadastro.
+  9. Reorganizou o projeto ConsoleApp conforme os princípios OO.
+  10. Fez uso correto das camadas de Domain e Infra.Data.
+  11. O aluno fez uso correto dos elementos do WPF, conforme o tipo de recurso apresentado na tela.
+  12. A lógica utilizada no projeto ConsoleApp está correta.
+  13. A lógica utilizada no projeto WPFApp está correta.

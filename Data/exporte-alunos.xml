@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <alunos>
   <aluno>
-    <matricula>sdz.k�lf</matricula>
+    <matricula>sdz.kzlf</matricula>
     <nome>Pedro</nome>
     <datadenascimento>22/01/2016</datadenascimento>
     <cpf>12345678901</cpf>
     <ativo>1</ativo>
   </aluno>
   <aluno>
-    <matricula>aosdhsdhfll�a</matricula>
+    <matricula>aosdhsdhfllza</matricula>
     <nome>Hue Br</nome>
     <datadenascimento>31/01/1995</datadenascimento>
     <cpf>12345678901</cpf>
@@ -26,7 +26,7 @@
     <nome>Michelle</nome>
     <datadenascimento>10/03/1954</datadenascimento>
     <cpf>65498732120</cpf>
-    <ativo>0</ativo>
+    <ativo>1</ativo>
   </aluno>
   <aluno>
     <matricula>hlkjaslkjsdg</matricula>
@@ -40,14 +40,14 @@
     <nome>Raul Gil</nome>
     <datadenascimento>24/05/1932</datadenascimento>
     <cpf>11111111111</cpf>
-    <ativo>0</ativo>
+    <ativo>1</ativo>
   </aluno>
   <aluno>
     <matricula>xcvcvcjgg</matricula>
     <nome>No Ideia</nome>
     <datadenascimento>04/03/1993</datadenascimento>
     <cpf>32145698703</cpf>
-    <ativo>1</ativo>
+    <ativo>0</ativo>
   </aluno>
   <aluno>
     <matricula>lkjpoiuf</matricula>
