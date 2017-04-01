@@ -188,10 +188,10 @@ private void matricula_TextChanged(object sender, TextChangedEventArgs e)
 ### Regras e orientações:
 
 1. Você deverá refatorar (arrumar) o código original do TP3, para seguir os princípio da orientação a objetos e engenharia de software.
-  1. Princípio da Responsabilidade Única
-  2. Princípio do Aberto-Fechado
-  3. Princípio da Substituição de Liskov (se houver herança)
-  4. Princípio da Segregação de Interface
+    1. Princípio da Responsabilidade Única
+    2. Princípio do Aberto-Fechado
+    3. Princípio da Substituição de Liskov (se houver herança)
+    4. Princípio da Segregação de Interface
 
 2. Coloque a pasta da solução original do TP3 Alternativo dentro de uma pasta chamada “Assessment Seu_NOME”, e compacte esta pasta para envio. **MÉTODO DE COMPACTAÇÃO: ZIPADO**.
 ```diff
@@ -206,16 +206,16 @@ obj. Isso vai diminuir o tamanho do zip,
 ![Restore Nuget Packages](./img/restore_nuget.png)
 
 4. Rubrica:
-  1. O aluno deverá apresentar a Solution conforme o especificado no “TP3 Alternativo” e “Assessemt Alternativo”.
-  2. Aplicação funcionando.
-  3. Código indentado.
-  4. Não cometer plágio. Fazer em dupla, trio e etc. é uma coisa. Ter partes dos códigos e/ou telas idênticos é plágio. ZERO PARA TODOS OS ENVOLVIDOS. Será solicitado à Coordenação a aplicação das punições acadêmicas definidas nos regulamentos do INSTITUTO INFNET. 
-  5. O aluno seguiu o princípio mais importante: Princípio da Responsabilidade Única, criando as classes e os métodos adequados à execução da lógica necessária ao funcionamento correto do software, conforme especificado.
-  6. O aluno utilizou Interfaces para definir os métodos públicos das classes que precisou criar.
-  7. A tela estava de acordo com os elementos mínimos necessários
-  8. Apresentou corretamente as mensagens na tela, conforme a situação do aluno ou a inexistência de cadastro.
-  9. Reorganizou o projeto ConsoleApp conforme os princípios OO.
-  10. Fez uso correto das camadas de Domain e Infra.Data.
-  11. O aluno fez uso correto dos elementos do WPF, conforme o tipo de recurso apresentado na tela.
-  12. A lógica utilizada no projeto ConsoleApp está correta.
-  13. A lógica utilizada no projeto WPFApp está correta.
+    1. O aluno deverá apresentar a Solution conforme o especificado no “TP3 Alternativo” e “Assessemt Alternativo”.
+    2. Aplicação funcionando.
+    3. Código indentado.
+    4. Não cometer plágio. Fazer em dupla, trio e etc. é uma coisa. Ter partes dos códigos e/ou telas idênticos é plágio. ZERO PARA TODOS OS ENVOLVIDOS. Será solicitado à Coordenação a aplicação das punições acadêmicas definidas nos regulamentos do INSTITUTO INFNET. 
+    5. O aluno seguiu o princípio mais importante: Princípio da Responsabilidade Única, criando as classes e os métodos adequados à execução da lógica necessária ao funcionamento correto do software, conforme especificado.
+    6. O aluno utilizou Interfaces para definir os métodos públicos das classes que precisou criar.
+    7. A tela estava de acordo com os elementos mínimos necessários
+    8. Apresentou corretamente as mensagens na tela, conforme a situação do aluno ou a inexistência de cadastro.
+    9. Reorganizou o projeto ConsoleApp conforme os princípios OO.
+    10. Fez uso correto das camadas de Domain e Infra.Data.
+    11. O aluno fez uso correto dos elementos do WPF, conforme o tipo de recurso apresentado na tela.
+    12. A lógica utilizada no projeto ConsoleApp está correta.
+    13. A lógica utilizada no projeto WPFApp está correta.
