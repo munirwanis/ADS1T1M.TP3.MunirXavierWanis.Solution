@@ -1,0 +1,34 @@
+﻿<Window x:Name="Assessment" x:Class="ADS1T1M.TP3.MunirXavierWanis.Presentation.WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADS1T1M.TP3.MunirXavierWanis.Presentation.WPFApp"
+        mc:Ignorable="d"
+        Title="Assessment" Height="350" Width="525">
+    <Grid MaxWidth="517" MaxHeight="319">
+        <Label x:Name="Lbl_SearchEnrollment" Content="Matrícula:" HorizontalAlignment="Left" Margin="50,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
+        <TextBox x:Name="Txt_Enrollment" HorizontalAlignment="Left" Height="24" Margin="117,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+        <Button x:Name="Btn_SearchEnrollment" Content="Buscar Matrícula" HorizontalAlignment="Left" Margin="397,34,0,0" VerticalAlignment="Top" Width="100" Height="24" Click="btn_search_enrollment_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="10,65,0,0" VerticalAlignment="Top" Width="498" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label x:Name="Lbl_NameKey" Content="Nome:" HorizontalAlignment="Left" Margin="50,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
+        <Label x:Name="Lbl_EnrollmentKey" Content="Matrícula:" HorizontalAlignment="Left" Margin="50,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
+        <Label x:Name="Lbl_BirthdateKey" Content="Data de Nascimento:" HorizontalAlignment="Left" Margin="50,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
+        <Label x:Name="Lbl_CpfKey" Content="CPF:" HorizontalAlignment="Left" Margin="50,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
+        <TextBlock x:Name="TxtBl_BirthdateValue" HorizontalAlignment="Left" Margin="185,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
+        <TextBlock x:Name="TxtBl_CpfValue" HorizontalAlignment="Left" Margin="185,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
+        <TextBlock x:Name="TxtBl_EnrollmentValue" HorizontalAlignment="Left" Margin="185,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
+        <TextBlock x:Name="TxtBl_NameValue" HorizontalAlignment="Left" Margin="185,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Background="#FF0017FF" Foreground="White"><Run Text="Aluno não cadastrado"/></TextBlock>
+
+    </Grid>
+</Window>
