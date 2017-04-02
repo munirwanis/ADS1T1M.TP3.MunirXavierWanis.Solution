@@ -14,12 +14,12 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Infra.Data.Contexts
             }
         }
 
-        public Aluno GetAluno(Aluno aluno)
+        public Aluno GetAluno(string enrollment)
         {
             using (var context = new EntityContextDb())
             {
                 var alunoDb = (from db in context.AlunoDb
-                               where db.Enrollment == aluno.Enrollment
+                               where db.Enrollment == enrollment
                                select db).SingleOrDefault();
                 return alunoDb;
             }

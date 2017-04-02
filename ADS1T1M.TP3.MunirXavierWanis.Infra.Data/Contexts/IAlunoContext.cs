@@ -4,7 +4,7 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Infra.Data.Contexts
 {
     public interface IAlunoContext
     {
-        Aluno GetAluno(Aluno aluno);
+        Aluno GetAluno(string enrollment);
 
         void AddAluno(Aluno aluno);
 

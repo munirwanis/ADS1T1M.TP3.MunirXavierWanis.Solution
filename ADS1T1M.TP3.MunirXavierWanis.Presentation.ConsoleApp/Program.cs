@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Xml.Serialization;
 using ADS1T1M.TP3.MunirXavierWanis.Domain.Entities;
 using ADS1T1M.TP3.MunirXavierWanis.Infra.Data.Contexts;
@@ -23,7 +22,7 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
 
                 foreach (var aluno in alunos.Alunos)
                 {
-                    var alunoDb = alunoContext.GetAluno(aluno);
+                    var alunoDb = alunoContext.GetAluno(aluno.Enrollment);
 
                     if (alunoDb == null)
                     {
