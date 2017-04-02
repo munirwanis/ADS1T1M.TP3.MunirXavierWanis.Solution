@@ -13,7 +13,7 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
         {
             var serializer = new XmlSerializer(typeof(AlunosList));
             var alunos = new AlunosList();
-            using (var fs = new FileStream(Directories.ExportAlunoDirectory, FileMode.Open))
+            using (var fs = new FileStream(Directories.ExportAlunoFileDirectory, FileMode.Open))
             {
                 alunos = (AlunosList)serializer.Deserialize(fs);
             }

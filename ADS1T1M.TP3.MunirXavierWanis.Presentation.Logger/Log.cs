@@ -36,7 +36,7 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger
             }
             Console.WriteLine(toLogText);
             Debug.WriteLine(toLogText);
-            using (var fs = new FileStream(Directories.LogDirectory, FileMode.Append, FileAccess.Write))
+            using (var fs = new FileStream(Directories.LogFileDirectory, FileMode.Append, FileAccess.Write))
             {
                 using (var sw = new StreamWriter(fs))
                 {
