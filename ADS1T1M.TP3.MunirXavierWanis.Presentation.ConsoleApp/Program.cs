@@ -11,36 +11,39 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var serializer = new XmlSerializer(typeof(AlunosList));
-            var alunos = new AlunosList();
-            using (var fs = new FileStream(Directories.ExportAlunoFileDirectory, FileMode.Open))
+            try
             {
-                alunos = (AlunosList)serializer.Deserialize(fs);
-            }
+                var serializer = new XmlSerializer(typeof(AlunosList));
+                var alunos = new AlunosList();
+                using (var fs = new FileStream(Directories.ExportAlunoFileDirectory, FileMode.Open))
+                {
+                    alunos = (AlunosList)serializer.Deserialize(fs);
+                }
+                var alunoContext = new AlunoContext();
 
-            using (var context = new EntityContextDb())
-            {
                 foreach (var aluno in alunos.Alunos)
                 {
-                    var alunoDb = (from db in context.AlunoDb
-                                   where db.Enrollment == aluno.Enrollment
-                                   select db).SingleOrDefault();
+                    var alunoDb = alunoContext.GetAluno(aluno);
+
                     if (alunoDb == null)
                     {
-                        context.AlunoDb.Add(aluno);
+                        alunoContext.AddAluno(aluno);
                         Logger.Log.LogNew(aluno);
                     }
                     else if (alunoDb.Enabled != aluno.Enabled)
                     {
-                        alunoDb.Enabled = aluno.Enabled;
+                        alunoContext.UpdateAluno(aluno);
                         Logger.Log.LogChanged(aluno);
                     }
                     else
                     {
                         Logger.Log.LogNotChanged(aluno);
                     }
-                    context.SaveChanges();
                 }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log.LogException(ex);
             }
             Console.WriteLine("================================================");
             Console.WriteLine("End");

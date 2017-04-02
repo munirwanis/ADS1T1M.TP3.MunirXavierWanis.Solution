@@ -16,6 +16,8 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger
         public static void LogNotChanged(Aluno aluno) =>
             Logging(aluno, LogType.NotChanged);
 
+        public static void LogException(Exception ex) => LogPrinter(ex.ToString());
+
         private static void Logging(Aluno aluno, LogType type)
         {
             int enabled = aluno.Enabled ? 1 : 0;
@@ -34,6 +36,11 @@ namespace ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger
                 default:
                     break;
             }
+            LogPrinter(toLogText);
+        }
+
+        private static void LogPrinter(string toLogText)
+        {
             Console.WriteLine(toLogText);
             Debug.WriteLine(toLogText);
             using (var fs = new FileStream(Directories.LogFileDirectory, FileMode.Append, FileAccess.Write))
