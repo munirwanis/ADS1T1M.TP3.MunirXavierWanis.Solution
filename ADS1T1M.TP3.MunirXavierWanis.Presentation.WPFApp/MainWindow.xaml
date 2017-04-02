@@ -28,7 +28,7 @@
         <TextBlock x:Name="TxtBl_CpfValue" HorizontalAlignment="Left" Margin="185,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
         <TextBlock x:Name="TxtBl_EnrollmentValue" HorizontalAlignment="Left" Margin="185,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
         <TextBlock x:Name="TxtBl_NameValue" HorizontalAlignment="Left" Margin="185,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="21"/>
-        <TextBlock HorizontalAlignment="Left" Margin="200,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Background="#FF0017FF" Foreground="White"><Run Text="Aluno não cadastrado"/></TextBlock>
+        <TextBlock x:Name="TxtBl_InfoMessage" HorizontalAlignment="Left" Margin="200,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Background="#FF0017FF" Foreground="White"><Run Text="Aluno não cadastrado"/></TextBlock>
 
     </Grid>
 </Window>

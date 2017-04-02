@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ADS1T1M.TP3.MunirXavierWanis.Presentation.WPFApp</RootNamespace>
     <AssemblyName>ADS1T1M.TP3.MunirXavierWanis.Presentation.WPFApp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -100,6 +101,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Domain\ADS1T1M.TP3.MunirXavierWanis.Domain.csproj">
+      <Project>{ee1bd8da-a32f-4122-b644-75d2d9d8fb31}</Project>
+      <Name>ADS1T1M.TP3.MunirXavierWanis.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Infra.Data\ADS1T1M.TP3.MunirXavierWanis.Infra.Data.csproj">
+      <Project>{44989ae7-b92c-452a-bc66-82c597e9c0a6}</Project>
+      <Name>ADS1T1M.TP3.MunirXavierWanis.Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger\ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger.csproj">
+      <Project>{2ca252bd-a517-4e0a-8a03-2e47b7afaaa4}</Project>
+      <Name>ADS1T1M.TP3.MunirXavierWanis.Presentation.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
