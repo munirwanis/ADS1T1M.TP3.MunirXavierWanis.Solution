@@ -1,14 +1,17 @@
 ﻿using System;
+using System.IO;
 
 namespace ADS1T1M.TP3.MunirXavierWanis.Domain.Entities
 {
-    public static class Directories
+    public class Directories
     {
         public static string BaseDirectory { get; } = AppDomain.CurrentDomain.BaseDirectory;
 
-        public static string ExportAlunoDirectory { get; } = $@"..{Slash}..{Slash}..{Slash}Data{Slash}exporte-alunos.xml";
+        public static string ExportAlunoFileDirectory { get; } = $@"..{Slash}..{Slash}..{Slash}Data{Slash}exporte-alunos.xml";
 
-        public static string LogDirectory { get; } = $@"..{Slash}..{Slash}..{Slash}Data{Slash}exporte-alunos-log-de-carga-{DateTime.Now.ToString("yyyyMMddhhmm")}.txt";
+        public static string LogFileDirectory { get; } = $@"..{Slash}..{Slash}..{Slash}Data{Slash}exporte-alunos-log-de-carga-{DateTime.Now.ToString("yyyyMMddhhmm")}.txt";
+
+        public static string ProjectDataDirectory { get; } = $@"{Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).FullName}{Slash}ADS1T1M.TP3.MunirXavierWanis.Infra.Data{Slash}";
 
         private static string Slash {
             get {
