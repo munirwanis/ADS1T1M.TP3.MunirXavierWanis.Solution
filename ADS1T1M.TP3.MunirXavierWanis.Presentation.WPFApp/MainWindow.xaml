@@ -8,7 +8,7 @@
         Title="Assessment" Height="350" Width="525">
     <Grid MaxWidth="517" MaxHeight="319">
         <Label x:Name="Lbl_SearchEnrollment" Content="Matrícula:" HorizontalAlignment="Left" Margin="50,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.468,0.291"/>
-        <TextBox x:Name="Txt_Enrollment" HorizontalAlignment="Left" Height="24" Margin="117,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+        <TextBox x:Name="Txt_Enrollment" HorizontalAlignment="Left" Height="24" Margin="117,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" TextChanged="Txt_Enrollment_TextChanged"/>
         <Button x:Name="Btn_SearchEnrollment" Content="Buscar Matrícula" HorizontalAlignment="Left" Margin="397,34,0,0" VerticalAlignment="Top" Width="100" Height="24" Click="btn_search_enrollment_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="10,65,0,0" VerticalAlignment="Top" Width="498" RenderTransformOrigin="0.5,0.5">
             <Border.RenderTransform>
